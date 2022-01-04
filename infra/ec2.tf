@@ -12,12 +12,6 @@ data "aws_ami" "ubuntu" {
   }
 }
 
-# resource "aws_launch_template" "foobar" {
-#     name_prefix   = "foobar"
-#     image_id      = "ami-0080e4c5bc078760e"
-#     instance_type = "t2.micro"
-# }
-
 resource "aws_instance" "backend_server" {
   #checkov:skip=CKV_AWS_88:Allow public IP for ssh access deploy since we don't have access to private GH Actions runners
   depends_on = [aws_route_table.main]
