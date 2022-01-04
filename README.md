@@ -76,3 +76,12 @@ for i in ${{ secrets.EC2_INSTANCE_IPS }}; do
   ssh -i ./private_key ${{ secrets.EC2_INSTANCE_USER }}@$i 'sudo systemctl is-active --quiet todo';
 done
 ```
+
+# Env Vars
+
+I have created the following env vars needed to deploy this project. 
+
+export TF_VARS_GITHUB_ACCESS_TOKEN=
+export TF_VARS_GITHUB_USER=
+export TF_VARS_ACCESS_KEY= <!--(aws)-->
+export TF_VARS_SECRET_KEY= <!--(aws)-->

@@ -10,6 +10,7 @@ variable "region" {
 
 variable "github_token" {
   type = string
+  sensitive=true
 }
 
 variable "github_repo" {
@@ -23,10 +24,14 @@ variable "github_user" {
 
 variable "access_key" {
   type = string
+  description = "AWS Access Key"
+  sensitive = true
 }
 
 variable "secret_key" {
   type = string
+  description = "AWS Secret Key"
+  sensitive = true
 }
 
 variable "project_name" {
